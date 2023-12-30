@@ -16,8 +16,6 @@ _speed = move_speed * _input_level;
 var _xspeed = lengthdir_x(_speed, move_dir);
 var _yspeed = lengthdir_y(_speed, move_dir); 
 
-
-
 //collision
 if place_meeting( x + _xspeed,y, obj_wall1)	
 {
@@ -30,23 +28,52 @@ if place_meeting( x, y + _yspeed, obj_wall1)
 x += _xspeed;
 y += _yspeed;
 
-if place_meeting( x + _xspeed,y, obj_lamp) or place_meeting( x, y + _yspeed, obj_lamp)
+//dodge stuff
+
+timer -= 1
+if (timer == 0)
 {
-	player_health += 1
-	ammo_count = 6
-	lit = true
+	can_roll = true
+}
+if (keyboard_check_pressed(vk_space) and can_roll == true)
+{
+	//still named a roll, even if its a teleport
+	can_roll = false
+	dodge = true
+	x += _xspeed *30;
+	y += _yspeed *30;
+	timer = 30
+	//start timer
+	dodge = false
 }
 
-if place_meeting( x + _xspeed,y, obj_enemy1)
-{
-	player_health -= 1
-}
 
-//set as current to allow expansion of weapons
+//max health has no current functionallity. future proofing. 
+//it is currently more complicated than using hard coded values
+if(global.player_health >= (max_health*.76))
+{
+	sprite_index = spr_player_cube_100
+}
+if(global.player_health <= (max_health*.75) and global.player_health >= (max_health*.51))
+{
+	sprite_index = spr_player_cube_75
+}
+if(global.player_health <= (max_health*.50) and global.player_health >= (max_health*.26))
+{
+	sprite_index = spr_player_cube_50
+}
+if(global.player_health <= (max_health*.25))
+{
+	sprite_index = spr_player_cube_25
+}
+		
+
+
+//set as current for future proofing
 var _current_bullet = obj_bullet
 
 
-if (mouse_check_button_pressed(mb_left) and ammo_count > 0 and lit == false)
+if (mouse_check_button_pressed(mb_left) and ammo_count > 0 and lit == false and dodge == false)
 	{
 	var _inst = instance_create_layer(x, y, "Instances", _current_bullet);
 	_inst.direction = point_direction(x,y,mouse_x,mouse_y);
@@ -58,7 +85,6 @@ lit = false
 with(obj_gui)
 	{
 	ammo_count = obj_player.ammo_count;
-	player_health = obj_player.player_health;
 	}
 
 

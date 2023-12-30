@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_enemy_portal",
+    "path": "sprites/spr_enemy_portal/spr_enemy_portal.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

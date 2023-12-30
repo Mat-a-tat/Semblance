@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_lamp",
-    "path": "sprites/spr_lamp/spr_lamp.yy",
+    "name": "spr_lamp_big",
+    "path": "sprites/spr_lamp_big/spr_lamp_big.yy",
   },
   "spriteMaskId": null,
   "visible": true,
