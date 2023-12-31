@@ -25,8 +25,12 @@ if place_meeting( x, y + _yspeed, obj_wall1)
 {
 	_yspeed = 0;
 }
+
 x += _xspeed;
 y += _yspeed;
+
+x = clamp(x,0, room_width - 10);
+y = clamp(y,0,room_height - 10);
 
 //dodge stuff
 
@@ -65,6 +69,10 @@ if(global.player_health <= (max_health*.50) and global.player_health >= (max_hea
 if(global.player_health <= (max_health*.25))
 {
 	sprite_index = spr_player_cube_25
+}
+if(global.player_health <= 0)
+{
+	room_goto(rm_gameover)
 }
 		
 

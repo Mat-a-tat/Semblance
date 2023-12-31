@@ -27,7 +27,7 @@
   "origin": 4,
   "parent": {
     "name": "Room Changers",
-    "path": "folders/Objects/Room Changers.yy",
+    "path": "folders/Objects/Systems/Room Changers.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

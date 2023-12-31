@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Lamp Square",
-    "path": "folders/Sprites/Cubes/Lamp Square.yy",
+    "name": "Lamp",
+    "path": "folders/Sprites/Lamp.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

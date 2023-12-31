@@ -191,8 +191,8 @@
   "lineHeight": 18,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "GUI",
+    "path": "folders/Sprites/GUI.yy",
   },
   "pointRounding": 0,
   "ranges": [

@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Archieve",
-    "path": "folders/Archieve.yy",
+    "path": "folders/Sprites/Archieve.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
