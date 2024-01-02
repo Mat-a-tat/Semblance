@@ -1,15 +1,16 @@
 {
   "FolderOrderSettings": [
     {"name":"Objects","order":7,"path":"folders/Objects.yy",},
-    {"name":"Rooms","order":8,"path":"folders/Rooms.yy",},
-    {"name":"Lamp","order":3,"path":"folders/Sprites/Lamp.yy",},
-    {"name":"Player","order":4,"path":"folders/Sprites/Player.yy",},
-    {"name":"GUI","order":1,"path":"folders/Sprites/GUI.yy",},
-    {"name":"Archieve","order":2,"path":"folders/Sprites/Archieve.yy",},
     {"name":"Enemy","order":12,"path":"folders/Objects/Enemy.yy",},
-    {"name":"Systems","order":13,"path":"folders/Objects/Systems.yy",},
     {"name":"Enviorment","order":14,"path":"folders/Objects/Enviorment.yy",},
     {"name":"Player","order":15,"path":"folders/Objects/Player.yy",},
+    {"name":"Systems","order":13,"path":"folders/Objects/Systems.yy",},
+    {"name":"Rooms","order":8,"path":"folders/Rooms.yy",},
+    {"name":"Archieve","order":2,"path":"folders/Sprites/Archieve.yy",},
+    {"name":"GUI","order":1,"path":"folders/Sprites/GUI.yy",},
+    {"name":"Lamp","order":3,"path":"folders/Sprites/Lamp.yy",},
+    {"name":"Player","order":4,"path":"folders/Sprites/Player.yy",},
+    {"name":"Scripts","order":9,"path":"folders/Scripts.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"fnt_game_over","order":1,"path":"fonts/fnt_game_over/fnt_game_over.yy",},

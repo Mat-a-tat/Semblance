@@ -5,3 +5,7 @@ global.timer = 1000;
 gui_w = display_get_gui_width();
 gui_h = display_get_gui_height()
 draw_x = gui_w-230
+ 
+
+// set_resolution()
+// currently does not work as inteded. 
