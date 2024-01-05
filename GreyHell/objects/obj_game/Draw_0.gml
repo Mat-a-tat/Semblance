@@ -9,6 +9,12 @@ case rm_level_tut1:
 	
     break;
 	
+case rm_level_tut2:
+    draw_text(draw_x, gui_h-280, "They hide in the dark.");
+	draw_text(draw_x, gui_h-260, "Leave the light.");
+	draw_text(draw_x, gui_h-240, "To reveal Them.");
+    break;
+	
 case rm_level1:
     draw_text(draw_x, gui_h-280, "Click to shoot.");
 	draw_text(draw_x, gui_h-260, "Harm not the light.");
@@ -31,18 +37,6 @@ case rm_level99:
     draw_text(draw_x, gui_h-200, "You have learned all.");
 	draw_text(draw_x, gui_h-180, "Return to the dark.");
 	draw_text(draw_x, gui_h-160, "Rest.");
-    break;
-
-case rm_start:
-    
-    break;
-
-case rm_win:
-    
-    break;
-
-case rm_gameover:
-    
     break;
 }
 
