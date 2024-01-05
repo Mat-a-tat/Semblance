@@ -8,10 +8,10 @@
     {"name":"Rooms","order":8,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":9,"path":"folders/Scripts.yy",},
     {"name":"Archieve","order":2,"path":"folders/Sprites/Archieve.yy",},
+    {"name":"Backgrounds","order":6,"path":"folders/Sprites/Backgrounds.yy",},
     {"name":"GUI","order":1,"path":"folders/Sprites/GUI.yy",},
     {"name":"Lamp","order":3,"path":"folders/Sprites/Lamp.yy",},
     {"name":"Player","order":4,"path":"folders/Sprites/Player.yy",},
-    {"name":"Backgrounds","order":6,"path":"folders/Sprites/Backgrounds.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"fnt_game_over","order":1,"path":"fonts/fnt_game_over/fnt_game_over.yy",},

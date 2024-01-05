@@ -32,26 +32,6 @@ y += _yspeed;
 x = clamp(x,0, room_width - 10);
 y = clamp(y,0,room_height - 10);
 
-//dodge stuff
-
-timer -= 1
-if (timer == 0)
-{
-	can_roll = true
-}
-if (keyboard_check_pressed(vk_space) and can_roll == true)
-{
-	//still named a roll, even if its a teleport
-	can_roll = false
-	dodge = true
-	x += _xspeed *30;
-	y += _yspeed *30;
-	timer = 30
-	//start timer
-	dodge = false
-}
-
-
 //max health has no current functionallity. future proofing. 
 //it is currently more complicated than using hard coded values
 if(global.player_health >= (max_health*.76))
@@ -95,5 +75,32 @@ with(obj_gui)
 	ammo_count = obj_player.ammo_count;
 	}
 
+/* // debugg to force a death
 
+if keyboard_check_pressed(vk_space)
+{
+	global.player_health = 0	
+} 
+*/ //
+
+/*
+//dodge stuff, janky and ill fitting 
+
+timer -= 1
+if (timer == 0)
+{
+	can_roll = true
+}
+if (keyboard_check_pressed(vk_space) and can_roll == true)
+{
+	//still named a roll, even if its a teleport
+	can_roll = false
+	dodge = true
+	x += _xspeed *30;
+	y += _yspeed *30;
+	timer = 30
+	//start timer
+	dodge = false
+}
+*/
 
