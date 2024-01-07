@@ -16,6 +16,15 @@ _speed = move_speed * _input_level;
 var _xspeed = lengthdir_x(_speed, move_dir);
 var _yspeed = lengthdir_y(_speed, move_dir); 
 
+// debugg command to press delete to die. 
+//I sometimes forget to comment this out, so its an odd key
+//to prevent accidental presses
+/*
+if keyboard_check(vk_delete) {
+	global.player_health = 0;
+}
+*/
+
 //collision
 if place_meeting( x + _xspeed,y, obj_wall1)	
 {
@@ -35,7 +44,10 @@ y = clamp(y,0,room_height - 10);
 if(place_meeting(x , y, obj_lamp) || place_meeting(x , y, obj_lamp_small) )
 {
 	global.player_health += 1
-	ammo_count = 6
+	if (ammo_count < 60)
+	{
+		ammo_count += 2;
+	}
 	global.player_lit = true
 }
 else
@@ -75,7 +87,7 @@ if (mouse_check_button_pressed(mb_left) and ammo_count > 0 and global.player_lit
 	{
 	var _inst = instance_create_layer(x, y, "Instances", _current_bullet);
 	_inst.direction = point_direction(x,y,mouse_x,mouse_y);
-	ammo_count -= 1
+	ammo_count -= 10
 	}
 // reset lit status after firing check, prevents lockouts and infinite bullet
 	

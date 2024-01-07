@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+draw_set_font(fnt_general);
 switch (room)
 {
 case rm_level_tut1:

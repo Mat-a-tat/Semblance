@@ -1,4 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
 alarm[0] = 60
+enemy_health = 100
+//hue = 100
 
