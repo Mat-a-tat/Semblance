@@ -41,6 +41,8 @@ y += _yspeed;
 x = clamp(x,0, room_width - 10);
 y = clamp(y,0,room_height - 10);
 
+invincibility_timer -= 1
+
 if(place_meeting(x , y, obj_lamp) || place_meeting(x , y, obj_lamp_small) )
 {
 	global.player_health += 1
@@ -72,6 +74,12 @@ if(global.player_health <= (max_health*.50) and global.player_health >= (max_hea
 if(global.player_health <= (max_health*.25))
 {
 	sprite_index = spr_player_cube_25
+
+}
+if(global.player_health == 1)
+{
+	sprite_index = spr_player_cube_1
+
 }
 if(global.player_health <= 0)
 {
@@ -85,6 +93,7 @@ var _current_bullet = obj_bullet
 
 if (mouse_check_button_pressed(mb_left) and ammo_count > 0 and global.player_lit == false and dodge == false)
 	{
+	audio_play_sound(snd_gun_shoot_2,2,false);
 	var _inst = instance_create_layer(x, y, "Instances", _current_bullet);
 	_inst.direction = point_direction(x,y,mouse_x,mouse_y);
 	ammo_count -= 10
@@ -96,13 +105,13 @@ with(obj_gui)
 	ammo_count = obj_player.ammo_count;
 	}
 
-/* // debugg to force a death
+/*  debugg to force a death
 
 if keyboard_check_pressed(vk_space)
 {
-	global.player_health = 0	
+	global.player_health = 0
 } 
-*/ //
+*/
 
 /*
 //dodge stuff, janky and ill fitting 

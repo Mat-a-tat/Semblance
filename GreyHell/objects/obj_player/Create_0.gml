@@ -11,3 +11,5 @@ max_health = 100
 can_roll = true
 room_speed = 60
 timer = room_speed *5
+invincibility_timer = 0
+lights_grace = true
