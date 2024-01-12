@@ -59,6 +59,7 @@ else
 
 //max health has no current functionallity. future proofing. 
 //it is currently more complicated than using hard coded values
+
 if(global.player_health >= (max_health*.76))
 {
 	sprite_index = spr_player_cube_100
@@ -96,6 +97,7 @@ if (mouse_check_button_pressed(mb_left) and ammo_count > 0 and global.player_lit
 	audio_play_sound(snd_gun_shoot_2,2,false);
 	var _inst = instance_create_layer(x, y, "Instances", _current_bullet);
 	_inst.direction = point_direction(x,y,mouse_x,mouse_y);
+	global.shake = true
 	ammo_count -= 10
 	}
 // reset lit status after firing check, prevents lockouts and infinite bullet

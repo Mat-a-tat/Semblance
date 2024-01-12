@@ -7,3 +7,7 @@ ammo_count = obj_player.ammo_count;
 ammo_count_gui = ammo_count / 10
 _xx = gui_w - 30
 _yy = gui_h - 25
+// custom cursor, that lags and dosent remove the dafault windows cursor. 
+
+//cursor_sprite = spr_CustomCursor;
+//Window_set_cursor(spr_CustomCursor) 
