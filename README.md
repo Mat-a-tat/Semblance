@@ -1,6 +1,6 @@
 Howdy!
 
-This project is my first in gamemaker. I've made silly little things in everything from Scratch, to Unreal and back to Unity;
+This project is my first in gamemaker. To note, Gamemaker struggles to get recognized properly on Github. This project is coded in a language similiar to Javascript. I've made silly little things in everything from Scratch, to Unreal and back to Unity;
 but really wanted to get into the bones of gamemaker. It's a fantastic piece of software for 2D development, and while
 I don't use visual scripting, I wanted a system that had a visual scripting component so I would be able to collaborate 
 with my friends that don't code. And thus, this!
