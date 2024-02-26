@@ -1,3 +1,4 @@
+#region Movement
 var _left = keyboard_check(vk_left) or keyboard_check(ord("A"));
 var _right = keyboard_check(vk_right) or keyboard_check(ord("D"));
 var _up = keyboard_check(vk_up) or keyboard_check(ord("W"));
@@ -15,17 +16,9 @@ _speed = move_speed * _input_level;
 
 var _xspeed = lengthdir_x(_speed, move_dir);
 var _yspeed = lengthdir_y(_speed, move_dir); 
+#endregion
 
-// debugg command to press delete to die. 
-//I sometimes forget to comment this out, so its an odd key
-//to prevent accidental presses
-/*
-if keyboard_check(vk_delete) {
-	global.player_health = 0;
-}
-*/
-
-//collision
+#region Collision
 if place_meeting( x + _xspeed,y, obj_wall1)	
 {
 	_xspeed = 0;
@@ -41,7 +34,9 @@ y += _yspeed;
 x = clamp(x,0, room_width - 10);
 y = clamp(y,0,room_height - 10);
 
-invincibility_timer -= 1
+#endregion
+
+#region Lamp Checker
 
 if(place_meeting(x , y, obj_lamp) || place_meeting(x , y, obj_lamp_small) )
 {
@@ -57,6 +52,9 @@ else
 	global.player_lit = false
 }
 
+#endregion
+
+#region Health Checker
 //max health has no current functionallity. future proofing. 
 //it is currently more complicated than using hard coded values
 
@@ -86,8 +84,9 @@ if(global.player_health <= 0)
 {
 	room_goto(rm_gameover)
 }
+#endregion
 		
-
+#region Bullet Gen / Counting
 //set as current for future proofing
 var _current_bullet = obj_bullet
 
@@ -106,15 +105,9 @@ with(obj_gui)
 	{
 	ammo_count = obj_player.ammo_count;
 	}
+#endregion
 
-/*  debugg to force a death
-
-if keyboard_check_pressed(vk_space)
-{
-	global.player_health = 0
-} 
-*/
-
+#region WIP Dodge Roll
 /*
 //dodge stuff, janky and ill fitting 
 
@@ -135,4 +128,16 @@ if (keyboard_check_pressed(vk_space) and can_roll == true)
 	dodge = false
 }
 */
+#endregion
+
+#region Debugg
+
+/*  debugg to force a death
+
+if keyboard_check_pressed(vk_space)
+{
+	global.player_health = 0
+} 
+*/
+#endregion
 
