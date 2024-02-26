@@ -82,7 +82,7 @@ if(global.player_health == 1)
 }
 if(global.player_health <= 0)
 {
-	room_goto(rm_gameover)
+	room_goto(room)
 }
 #endregion
 		

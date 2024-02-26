@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "set_resolution",
+  "name": "init",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
